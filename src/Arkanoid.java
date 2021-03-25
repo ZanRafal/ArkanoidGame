@@ -1,4 +1,10 @@
 public class Arkanoid {
+
+    public Arkanoid(int height, int width) {
+        this.height = height;
+        this.width = width;
+    }
+
     private int height;
     private int width;
 
