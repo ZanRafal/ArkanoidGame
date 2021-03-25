@@ -1,4 +1,4 @@
-public class BaseObject {
+public abstract class BaseObject {
     private double x;
     private double y;
     private double radius;
@@ -31,5 +31,17 @@ public class BaseObject {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    abstract void draw(Canvas canvas);
+
+    abstract void move();
+
+    public boolean intersects(BaseObject o) {
+        double distX = x - o.x;
+        double distY = y - o.y;
+        double distance = Math.sqrt(distX * distX + distY * distY);
+        double maxRad = Math.max(radius, o.radius);
+        return distance <= maxRad;
     }
 }
