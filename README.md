@@ -1,2 +1,2 @@
 # ArkanoidGame
-Simple implementation of well known, old-fashiond game 
+Simple implementation of well known, old-fashioned game 
