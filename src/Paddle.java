@@ -16,7 +16,7 @@ public class Paddle extends BaseObject {
 
     void move() {
         double dx = speed * direction;
-        x += dx;
+        x = x + dx;
 
         checkBorders(radius, Arkanoid.game.getWidth() - radius + 1, 1, Arkanoid.game.getHeight() + 1);
     }

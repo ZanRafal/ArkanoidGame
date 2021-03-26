@@ -1,5 +1,4 @@
 import java.awt.event.KeyEvent;
-import java.util.List;
 import java.util.ArrayList;
 
 public class Arkanoid {
@@ -7,9 +6,9 @@ public class Arkanoid {
     private int width;
     private Paddle paddle;
     private Ball ball;
-    private List<Brick> bricks = new ArrayList<>();
+    private ArrayList<Brick> bricks = new ArrayList<>();
     public static Arkanoid game;
-    private boolean isGameOver;
+    private boolean isGameOver = false;
 
     public Arkanoid(int height, int width) {
         this.height = height;
@@ -48,11 +47,11 @@ public class Arkanoid {
         this.ball = ball;
     }
 
-    public List<Brick> getBricks() {
+    public ArrayList<Brick> getBricks() {
         return bricks;
     }
 
-    public void setBricks(List<Brick> bricks) {
+    public void setBricks(ArrayList<Brick> bricks) {
         this.bricks = bricks;
     }
 
@@ -62,10 +61,8 @@ public class Arkanoid {
         for (Brick brick : bricks) {
             brick.draw(canvas);
         }
-
         ball.draw(canvas);
         paddle.draw(canvas);
-
     }
 
     private void drawBorders(Canvas canvas) {

@@ -1,7 +1,8 @@
 public class Ball extends BaseObject {
     private double speed;
     private double direction;
-    private double dx, dy;
+    private double dx;
+    private double dy;
     private boolean isFrozen;
 
     public Ball(double x, double y, double speed, double direction) {
