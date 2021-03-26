@@ -1,7 +1,7 @@
 public abstract class BaseObject {
-    private double x;
-    private double y;
-    private double radius;
+    protected double x;
+    protected double y;
+    protected double radius;
 
     public BaseObject(double x, double y, double radius) {
         this.x = x;
@@ -36,6 +36,13 @@ public abstract class BaseObject {
     abstract void draw(Canvas canvas);
 
     abstract void move();
+
+    void checkBorders(double minx, double maxx, double miny, double maxy) {
+        if (x < minx) x = minx;
+        if (x > maxx) x = maxx;
+        if (y < miny) y = miny;
+        if (y > maxy) y = maxy;
+    }
 
     public boolean intersects(BaseObject o) {
         double distX = x - o.x;
