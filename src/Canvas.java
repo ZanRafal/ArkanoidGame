@@ -47,7 +47,7 @@ public class Canvas {
         int width = matrix[0].length;
 
         for(int i = 0; i < height; i++) {
-            for (int j = 0; j < width; i++) {
+            for (int j = 0; j < width; j++) {
                 if(matrix[i][j] == 1) {
                     setPoint(x + j, y + i, c);
                 }
@@ -62,9 +62,9 @@ public class Canvas {
     public void print() {
         for(int i = 0; i < height; i++) {
             for(int j = 0; j < width; j++) {
-                System.out.println(" ");
-                System.out.println(matrix[i][j]);
-                System.out.println(" ");
+                System.out.print(" ");
+                System.out.print(matrix[i][j]);
+                System.out.print(" ");
             }
 
             System.out.println();

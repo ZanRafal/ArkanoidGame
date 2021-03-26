@@ -7,7 +7,7 @@ public class Arkanoid {
     private int width;
     private Paddle paddle;
     private Ball ball;
-    private List<Brick> bricks;
+    private List<Brick> bricks = new ArrayList<>();
     public static Arkanoid game;
     private boolean isGameOver;
 
@@ -123,7 +123,7 @@ public class Arkanoid {
     }
 
     void checkBrickCollision() {
-        for (Brick brick : new ArrayList<Brick>(bricks)) {
+        for (Brick brick : new ArrayList<>(bricks)) {
             if (ball.intersects(brick)) {
                 double angle = Math.random() * 360;
                 ball.setDirection(angle);
