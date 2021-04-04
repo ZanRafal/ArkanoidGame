@@ -1,5 +1,5 @@
 # ArkanoidGame
-Simple console version implementation of well known, old-fashioned game. Even controls are simple..:
+Simple console version of well-known, old-fashioned game. Even controls are simple..:
 - SPACE for launching the ball
 - LEFT_ARROW_KEY to move the paddle left
 - RIGHT_ARROW_KEY to move the paddle right
